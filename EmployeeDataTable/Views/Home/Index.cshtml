@@ -1,0 +1,110 @@
+﻿@model EmployeeDataTable.Models.EmployeeModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<div class="text-center">
+    <h1 class="display-4">EMPLOYEE DATA</h1>
+    <div>
+        <form>
+            @using (Html.BeginForm("Create", "Home", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+
+                <label for="EmployeeID">Employee ID :</label>
+                @Html.TextBoxFor(m => m.EmployeeID)
+                <br />
+
+                <label for="EmpName">Employee Name :</label>
+                @Html.TextBoxFor(m => m.EmpName)
+                <br />
+
+                <label for="EmpAge">Employee Age :</label>
+                @Html.TextBoxFor(m => m.EmpAge)
+                <br />
+
+                <label for="EmpCity">Employee City :</label>
+                @Html.TextBoxFor(m => m.EmpCity)
+                <br />
+
+                <label for="EmpDepartment">Employee Department :</label>
+                @Html.TextBoxFor(m => m.EmpDepartment)
+                <br />
+
+                <label for="EmpManager">Employee Manager :</label>
+                @Html.TextBoxFor(m => m.EmpManager)
+                <br />
+
+                <label for="JoiningDate">Joining Date :</label>
+                @Html.TextBoxFor(m => m.JoiningDate)
+                <br />
+
+                <label for="Salary">Salary :</label>
+                @Html.TextBoxFor(m => m.Salary)
+                <br />
+
+                <input type="submit" value="Submit" />
+            }
+        </form>
+    </div>
+
+@*@<div>
+       
+    <form>
+                @using (Html.BeginForm("Create", "Home", FormMethod.Post))
+                {
+
+                @Html.AntiForgeryToken()
+
+        <label for="EmployeeID">Employee ID :</label>
+                @Html.TextBoxFor(m=>m.EmployeeID)
+                <br />
+        //<input type="text" id="EmployeeID" name="EmployeeID" /><br />
+
+        <label for="EmpName">Employee Name :</label>
+                @Html.TextBoxFor(m=>m.EmpName)
+                <br />
+       // <input type="text" id="EmpName" name="EmpName" /><br />
+
+        <label for="EmpAge">Employee Age :</label>
+                @Html.TextBoxFor(m=>m.EmpAge)
+                <br />
+        //<input type="text" id="EmpAge" name="EmpAge" /><br />
+
+        <label for="EmpCity">Employee City :</label>
+                @Html.TextBoxFor(m=>m.EmpCity)
+                <br />
+       // <input type="text" id="EmpCity" name="EmpCity" /><br />
+
+        <label for="EmpDepartment">Employee Department :</label>
+                @Html.TextBoxFor(m=>m.EmpDepartment)
+                <br />
+        //<input type="text" id="EmpDepartment" name="EmpDepartment" /><br />
+
+        <label for="EmpManager">Employee Manager :</label>
+                @Html.TextBoxFor(m=>m.EmpManager)
+                <br />
+        //<input type="text" id="EmpManager" name="EmpManager" /><br />
+
+        <label for="JoiningDate">Joining Date :</label>
+                @Html.TextBoxFor(m=>m.JoiningDate)
+                <br />
+        //<input type="text" id="JoiningDAte" name="JoiningDate" /><br />
+
+        <label for="Salary">Salary :</label>
+                @Html.TextBoxFor(m=>m.Salary)
+                <br />
+       // <input type="text" id="Salary" name="Salary" /><br />
+
+        <input type="submit" value="Submit" />
+        }
+    </form>
+    
+</div>*@
+</div>
